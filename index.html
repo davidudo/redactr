@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Redactr</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <h1>redactr</h1>
+  </nav>
+
+  <main>
+    <div>
+      <h3>About Redactr</h3>
+      <p>Redactr helps you remove a specific word from a text that may be private or sensitive and replaces it with a character or characters, preparing the text for publication.</p>
+    </div>
+
+    <div class="main-container">
+      <section>
+        <form autocomplete="off">
+          <div>
+            <textarea id="text" placeholder="Start by writing or paste something here and filling the two other input fields then press the Redact Now button." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="replace-word" placeholder="Type the word to be replaced." required />
+            <input type="text" id="replace-character" placeholder="[Optional] type your character of choice e.g (#, *, +, @, +)" />
+          </div>
+        </form>
+
+        <div class="btn-container">
+          <div class="tooltip">
+            <img src="icon-copy.svg" alt="Copy Icon" id="copy-btn">
+            <span class="tooltiptext" id="tooltip">Copy to clipboard</span>
+          </div>
+          <img src="icon-delete.svg" alt="Delete Icon" id="delete-btn">
+
+          <a href="#redacted-text"><button id="redact-btn" class="redact-btn">Redact Now</button></a>
+        </div>
+      </section>
+
+      <section class="redacted-text-container">
+        <p id="redacted-text"></p>
+
+        <div id="dummy-loading" class="dummy-loading">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="statistics">
+      <h3>Statistics</h3>
+
+      <div>
+        <div>
+          <img src="icon-scan.svg" alt="Scan Icon" />
+          <div>
+            <h4>Words Scanned</h4>
+            <p id="words-scan">0</p>
+          </div>
+        </div>
+        <div>
+          <img src="icon-compare.svg" alt="Compare Icon" />
+          <div>
+            <h4>Matched Word(s)</h4>
+            <p id="matched-words">0</p>
+          </div>
+        </div>
+        <div>
+          <img src="icon-replace.svg" alt="Replace Icon" />
+          <div>
+            <h4>Characters Scrambled</h4>
+            <p id="characters-scramb">0</p>
+          </div>
+        </div>
+        <div>
+          <img src="icon-time.svg" alt="Time Icon" />
+          <div>
+            <h4>Time Taken</h4>
+            <p id="time-taken">0s</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
