@@ -33,11 +33,13 @@ function redactText() {
   let splitted_original_text;
   let first_word = text.toLowerCase().split(" ")[0];
 
-  if (first_word === word_to_redact) {
-    splitted_original_text = text.trim().toLowerCase().split(" ");
-  } else {
-    splitted_original_text = text.trim().split(" ");
-  };
+  for (let index in word_to_redact) {
+    if (first_word === word_to_redact[index]) {
+      splitted_original_text = text.trim().toLowerCase().split(" ");
+    } else {
+      splitted_original_text = text.trim().split(" ");
+    };
+  }
 
   const scrambled_word = scramble_character.repeat(word_to_redact.length);
 
@@ -54,7 +56,7 @@ function redactText() {
     if ((splitted_original_text[index].replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase()) === (word_to_redact)) {
       splitted_original_text[index] = scrambled_word;
       match_count = match_count + 1;
-    }
+    };
   };
 
   const end_time = performance.now()
@@ -67,7 +69,7 @@ function redactText() {
   displayRedactedText(redacted_text);
 
   displayStat(number_of_word, number_of_text, match_count, time_taken, word_to_redact);
-  
+
   const copy_button = document.getElementById("copy-btn");
   copy_button.style.display = "block"
 };
@@ -132,7 +134,7 @@ function deleteText() {
 
   const dummy_loading = document.getElementById("dummy-loading");
   dummy_loading.style.display = "block";
-  
+
   const copy_button = document.getElementById("copy-btn");
   copy_button.style.display = "none";
 };

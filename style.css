@@ -11,6 +11,7 @@
   --wolf-grey: #777777;
   --hare-grey: #AFAFAF;
   --polar-grey: #f7f7f7;
+  /*color-scheme: dark;*/
 }
 
 @font-face {
@@ -67,7 +68,7 @@ main>div>p {
 }
 
 textarea {
-  min-height: 17rem;
+  min-height: 10rem;
   width: 100%;
   font-size: 16px;
   margin: 1rem 0;
