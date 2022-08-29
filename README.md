@@ -1,4 +1,12 @@
-# AltSchool Semester 1 Holiday Challenge
+# AltSchool Semester 1 Holiday Challenge (Redactr)
+
+![Readctr Screenshot](./images/redactr.png)
+
+## About
+This project is one of the holiday challenges Altschool gave for its students to test and improve their HTML, CSS and JavaScript skills. More information about the project can be viewed below.
+
+### View Project
+This project can be viewed through this link [https://davidudo.github.io/redactr](https://davidudo.github.io/redactr/).
 
 ### What
 Solidify what you’ve learnt by building cool simple things you can showcase
